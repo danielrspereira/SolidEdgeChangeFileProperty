@@ -49,7 +49,8 @@ namespace SolidEdgeChangeFileProperty
             }
             catch (Exception ex)
             {
-                // e.g. report ex.Message;
+                Console.WriteLine(ex.Message);
+                Console.WriteLine(ex.StackTrace);
             }
             finally
             {
