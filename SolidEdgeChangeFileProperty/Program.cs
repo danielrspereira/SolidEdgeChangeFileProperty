@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Runtime.InteropServices;
 
 namespace SolidEdgeChangeFileProperty
@@ -8,7 +9,11 @@ namespace SolidEdgeChangeFileProperty
         [STAThread]
         static void Main(string[] args)
         {
-            string filePath = @"C:\users\danie\desktop\Part12.par";
+            string folderPath = "CADModels";
+            string fileName = "part12.part";
+
+            string relativePath = Path.Combine(folderPath, fileName);
+            string filePath = Path.GetFullPath(relativePath);
 
             try
             {
